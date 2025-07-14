@@ -3,9 +3,6 @@ const express = require("express");
 const mongoose = require("mongoose");
 const connectDb = require("./db/connectDb");
 const fetchMasterDetails = require("./helpers/fetchMasterDetails");
-const { default: axios } = require("axios");
-const { TransactionListener } = require("metaapi.cloud-sdk");
-const { message } = require("telegraf/filters");
 
 const app = express();
 // Middleware to parse JSON
