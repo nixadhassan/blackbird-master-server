@@ -7,7 +7,7 @@ const systemSchema = new Schema(
       default: true,
     },
     seenIds: [String],
-    experience:Number,
+    experience: Number,
     masterAccountId: String,
     strategyId: String,
     withdrawalRequests: [
@@ -30,6 +30,7 @@ const systemSchema = new Schema(
     ],
     admins: [Number],
     tg: String,
+    profitShare: Number,
   },
   { timestamps: true }
 );

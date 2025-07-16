@@ -26,8 +26,8 @@ module.exports = fetchMasterTotalReturn = async (accountId) => {
       totalProfit += deal.profit;
     });
 
-    // Given initial balance = $1,000
-    const initialBalance = 1000;
+    // Given initial balance = $10,000
+    const initialBalance = 10000;
 
     // Calculate total return (%)
     const totalReturnPercent = (totalProfit / initialBalance) * 100;
