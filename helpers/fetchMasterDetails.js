@@ -10,9 +10,9 @@ const fetchMasterDetails = async () => {
   console.log("Fetching master details");
 
   // Fetch master id and Master's trades
-  const { masterAccountId, masterTrades, tg, admins, experience } = await System.findOne({
+  const { masterAccountId, masterTrades, tg, admins, experience, followers } = await System.findOne({
     admin: true,
-  }).select("masterAccountId masterTrades tg admins experience");
+  }).select("masterAccountId masterTrades tg admins experience followers");
 
   // Fetch master balance
   const masterBalance = await fetchMasterBalance(masterAccountId);
@@ -34,7 +34,8 @@ const fetchMasterDetails = async () => {
     masterTrades,
     tg,
     admins,
-    experience 
+    experience,
+    followers
   };
 
   if (global.masterChanged) {
