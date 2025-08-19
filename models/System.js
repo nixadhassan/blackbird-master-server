@@ -31,6 +31,7 @@ const systemSchema = new Schema(
     admins: [Number],
     tg: String,
     profitShare: Number,
+    followers:Number
   },
   { timestamps: true }
 );

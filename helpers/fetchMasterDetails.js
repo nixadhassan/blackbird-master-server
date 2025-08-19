@@ -60,6 +60,8 @@ const fetchMasterDetails = async () => {
     }
   }
 
+  console.log(global.masterDetails)
+
   // Prevent multiple intervals (when re-invoked)
   if (global.masterDetailsInterval) {
     clearInterval(global.masterDetailsInterval);
